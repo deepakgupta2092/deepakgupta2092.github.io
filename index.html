@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Deepak Gupta — Research Portfolio</title>
+  <meta name="description" content="Research portfolio of Dr. Deepak Gupta, postdoctoral researcher at Penn State University specializing in tissue engineering, 3D bioprinting, and biomaterials." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"]{
+      --font-display:'Playfair Display',Georgia,serif;
+      --font-body:'DM Sans','Helvetica Neue',sans-serif;
+      --font-mono:'Courier New',Courier,monospace;
+      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
+      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
+      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
+      --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+      --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+      --text-3xl:clamp(2.5rem,1rem + 4vw,5rem);
+      --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;
+      --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
+      --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
+      --color-bg:#f5f4f0;--color-surface:#f9f8f5;--color-surface-2:#ffffff;
+      --color-surface-offset:#eeece7;--color-surface-dynamic:#e5e3dc;
+      --color-divider:#d8d5cc;--color-border:#ccc9bf;
+      --color-text:#1a1812;--color-text-muted:#5a5750;--color-text-faint:#a09d96;
+      --color-text-inverse:#f5f4f0;
+      --color-primary:#0f1b2d;--color-primary-hover:#1a2d47;
+      --color-primary-active:#0a1220;--color-primary-highlight:#d0d8e4;
+      --color-accent:#2e5d8a;--color-accent-hover:#1e4166;--color-accent-muted:#dce6f0;
+      --color-ongoing:#2e6b3e;--color-ongoing-bg:#e8f5ec;
+      --color-review:#7a4d08;--color-review-bg:#fef3e2;
+      --color-complete:#1a4a7a;--color-complete-bg:#e0ecf8;
+      --color-published:#3d2e7a;--color-published-bg:#ece8f8;
+      --radius-sm:.25rem;--radius-md:.5rem;--radius-lg:.75rem;
+      --radius-xl:1rem;--radius-full:9999px;
+      --transition:180ms cubic-bezier(.16,1,.3,1);
+      --shadow-sm:0 1px 3px oklch(.15 .02 230/.07);
+      --shadow-md:0 4px 16px oklch(.15 .02 230/.09);
+      --shadow-lg:0 12px 40px oklch(.15 .02 230/.13);
+      --content-wide:1200px;--nav-height:64px;
+    }
+    [data-theme="dark"]{
+      --color-bg:#111418;--color-surface:#161b22;--color-surface-2:#1c2330;
+      --color-surface-offset:#131820;--color-divider:#242d3a;--color-border:#2e3a4a;
+      --color-text:#d8dde5;--color-text-muted:#7a8899;--color-text-faint:#4a5568;
+      --color-text-inverse:#111418;
+      --color-primary:#3a7bd5;--color-primary-hover:#5a93e0;
+      --color-accent:#5a93e0;--color-accent-hover:#7aabee;--color-accent-muted:#1a2d47;
+      --color-ongoing:#6dba84;--color-ongoing-bg:#132a1c;
+      --color-review:#e0a040;--color-review-bg:#2a1e0a;
+      --color-complete:#5a93e0;--color-complete-bg:#0f1e30;
+      --color-published:#9a80e0;--color-published-bg:#1a1530;
+      --shadow-sm:0 1px 3px #0005;--shadow-md:0 4px 16px #0006;--shadow-lg:0 12px 40px #0008;
+    }
+    @media(prefers-color-scheme:dark){:root:not([data-theme]){
+      --color-bg:#111418;--color-surface:#161b22;--color-surface-2:#1c2330;
+      --color-surface-offset:#131820;--color-divider:#242d3a;--color-border:#2e3a4a;
+      --color-text:#d8dde5;--color-text-muted:#7a8899;--color-text-faint:#4a5568;
+      --color-text-inverse:#111418;--color-primary:#3a7bd5;--color-primary-hover:#5a93e0;
+      --color-accent:#5a93e0;--color-accent-hover:#7aabee;--color-accent-muted:#1a2d47;
+      --color-ongoing:#6dba84;--color-ongoing-bg:#132a1c;
+      --color-review:#e0a040;--color-review-bg:#2a1e0a;
+      --color-complete:#5a93e0;--color-complete-bg:#0f1e30;
+      --color-published:#9a80e0;--color-published-bg:#1a1530;
+      --shadow-sm:0 1px 3px #0005;--shadow-md:0 4px 16px #0006;--shadow-lg:0 12px 40px #0008;
+    }}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-height) + 2rem);}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.65;}
+    img,svg{display:block;max-width:100%;}
+    button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
+    a{color:var(--color-accent);text-decoration:none;transition:color var(--transition);}
+    a:hover{color:var(--color-accent-hover);}
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.2;text-wrap:balance;}
+    p{max-width:70ch;text-wrap:pretty;}
+    ::selection{background:var(--color-primary-highlight);color:var(--color-text);}
+    :focus-visible{outline:2px solid var(--color-accent);outline-offset:3px;border-radius:var(--radius-sm);}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
+
+    /* NAV */
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-height);background:color-mix(in srgb,var(--color-bg) 93%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-divider);}
+    .nav-inner{max-width:var(--content-wide);margin:0 auto;padding:0 1.5rem;width:100%;height:100%;display:flex;align-items:center;gap:1.5rem;}
+    .nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--color-text);}
+    .nav-logo-text{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;}
+    .nav-logo-sub{font-size:var(--text-xs);color:var(--color-text-muted);}
+    .nav-links{display:flex;align-items:center;gap:.25rem;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:var(--text-sm);font-weight:500;color:var(--color-text-muted);padding:.5rem .75rem;border-radius:var(--radius-md);text-decoration:none;transition:color var(--transition),background var(--transition);}
+    .nav-links a:hover{color:var(--color-text);background:var(--color-surface-offset);}
+    .nav-links a.active{color:var(--color-primary);font-weight:600;}
+    [data-theme="dark"] .nav-links a.active{color:var(--color-accent);}
+    .nav-actions{display:flex;align-items:center;gap:.75rem;margin-left:.5rem;}
+    .btn-theme{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);color:var(--color-text-muted);transition:color var(--transition),background var(--transition);}
+    .btn-theme:hover{color:var(--color-text);background:var(--color-surface-offset);}
+    .btn-orcid{font-size:var(--text-xs);font-weight:700;padding:.4rem .9rem;background:var(--color-primary);color:#fff!important;border-radius:var(--radius-md);text-decoration:none;transition:background var(--transition);letter-spacing:.03em;}
+    .btn-orcid:hover{background:var(--color-primary-hover);color:#fff!important;}
+    .hamburger{display:none;width:44px;height:44px;align-items:center;justify-content:center;color:var(--color-text-muted);border-radius:var(--radius-md);margin-left:auto;}
+    .hamburger:hover{background:var(--color-surface-offset);color:var(--color-text);}
+    .mobile-menu{display:none;position:fixed;top:var(--nav-height);left:0;right:0;z-index:99;background:var(--color-surface);border-bottom:1px solid var(--color-divider);padding:1rem 1.5rem;flex-direction:column;gap:.5rem;box-shadow:var(--shadow-md);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{font-size:var(--text-base);font-weight:500;color:var(--color-text-muted);padding:.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;transition:color var(--transition),background var(--transition);}
+    .mobile-menu a:hover,.mobile-menu a.active{color:var(--color-text);background:var(--color-surface-offset);}
+    @media(max-width:768px){.nav-links,.btn-orcid{display:none!important;}.hamburger{display:flex;}}
+    @media(min-width:769px){.mobile-menu{display:none!important;}}
+
+    /* LAYOUT */
+    main{padding-top:var(--nav-height);}
+    .page-section{display:none;}
+    .page-section.active{display:block;}
+    .container{max-width:var(--content-wide);margin:0 auto;padding:0 1.5rem;}
+    .section-header{padding:clamp(3rem,6vw,5rem) 0 2.5rem;border-bottom:1px solid var(--color-divider);margin-bottom:3rem;}
+    .eyebrow{font-size:var(--text-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.75rem;}
+    .section-title{font-size:var(--text-2xl);font-weight:700;color:var(--color-text);margin-bottom:1rem;}
+    .section-desc{font-size:var(--text-base);color:var(--color-text-muted);max-width:60ch;line-height:1.7;}
+
+    /* HERO */
+    .hero{min-height:82vh;display:flex;align-items:center;position:relative;overflow:hidden;background:#0f1b2d;}
+    .hero-bg{position:absolute;inset:0;background-image:url('https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/7a7b9958-1952-458a-8d53-91d25fab5cde.png');background-size:cover;background-position:center;opacity:.28;}
+    .hero-inner{position:relative;z-index:1;max-width:var(--content-wide);margin:0 auto;padding:clamp(4rem,8vw,6rem) 1.5rem;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;width:100%;}
+    @media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-avatar{display:none;}}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--text-xs);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.2);padding:.2rem .8rem;border-radius:9999px;margin-bottom:1.5rem;}
+    .hero-dot{width:6px;height:6px;border-radius:50%;background:#6dba84;animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .hero-name{font-size:var(--text-3xl);font-weight:700;color:#fff;margin-bottom:.75rem;line-height:1.1;}
+    .hero-title-line{font-family:var(--font-body);font-size:var(--text-lg);color:rgba(255,255,255,.72);margin-bottom:2rem;line-height:1.5;}
+    .hero-bio{font-size:var(--text-base);color:rgba(255,255,255,.68);line-height:1.8;margin-bottom:2.5rem;max-width:56ch;}
+    .hero-stats{display:flex;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap;}
+    .stat-num{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:#fff;line-height:1;}
+    .stat-label{font-size:var(--text-xs);color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em;}
+    .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;}
+    .btn-hero-primary{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--text-sm);font-weight:600;padding:.75rem 1.5rem;background:#fff;color:#0f1b2d;border-radius:var(--radius-md);text-decoration:none;transition:background var(--transition),transform var(--transition);}
+    .btn-hero-primary:hover{background:#edf0f5;color:#0f1b2d;transform:translateY(-2px);}
+    .btn-hero-secondary{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--text-sm);font-weight:500;padding:.75rem 1.5rem;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.3);border-radius:var(--radius-md);text-decoration:none;transition:background var(--transition),border-color var(--transition);}
+    .btn-hero-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5);color:#fff;}
+    .avatar-frame{width:clamp(130px,15vw,210px);aspect-ratio:1;border-radius:var(--radius-xl);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;}
+    .avatar-initials{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:rgba(255,255,255,.82);line-height:1;}
+    .avatar-label{font-size:var(--text-xs);color:rgba(255,255,255,.38);text-align:center;line-height:1.4;}
+
+    /* INTERESTS */
+    .interests-section{padding:clamp(3rem,6vw,5rem) 0;background:var(--color-surface);border-bottom:1px solid var(--color-divider);}
+    .interests-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:1rem;margin-top:2rem;}
+    .interest-card{background:var(--color-bg);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;transition:box-shadow var(--transition),transform var(--transition);}
+    .interest-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);}
+    .int-name{font-family:var(--font-display);font-size:var(--text-base);font-weight:600;color:var(--color-text);margin-bottom:.5rem;}
+    .int-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;}
+
+    /* NEWS */
+    .news-strip{padding:clamp(2.5rem,5vw,4rem) 0;}
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1.25rem;margin-top:2rem;}
+    .news-card{background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;transition:box-shadow var(--transition);}
+    .news-card:hover{box-shadow:var(--shadow-md);}
+    .news-year{font-size:var(--text-xs);font-weight:600;color:var(--color-accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;}
+    .news-title{font-family:var(--font-display);font-size:var(--text-base);font-weight:600;color:var(--color-text);line-height:1.4;}
+
+    /* PUBLICATIONS */
+    .pub-controls{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:1.5rem;}
+    .search-wrap{position:relative;flex:1;min-width:200px;}
+    .search-wrap svg{position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:var(--color-text-faint);pointer-events:none;width:15px;height:15px;}
+    .pub-search{width:100%;padding:.65rem .75rem .65rem 2.2rem;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface-2);color:var(--color-text);font-size:var(--text-sm);transition:border-color var(--transition),box-shadow var(--transition);}
+    .pub-search:focus{outline:none;border-color:var(--color-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--color-accent) 20%,transparent);}
+    .filter-btns{display:flex;gap:.5rem;flex-wrap:wrap;}
+    .filter-btn{font-size:var(--text-xs);font-weight:600;padding:.4rem 1rem;border:1px solid var(--color-border);border-radius:9999px;color:var(--color-text-muted);background:transparent;cursor:pointer;transition:all var(--transition);white-space:nowrap;}
+    .filter-btn:hover{border-color:var(--color-accent);color:var(--color-accent);}
+    .filter-btn.active{background:var(--color-primary);border-color:var(--color-primary);color:#fff;}
+    .pub-count{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:2rem;}
+    .pub-count span{font-weight:600;color:var(--color-text);}
+    .pub-year-group{margin-bottom:3rem;}
+    .year-label{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;padding-bottom:1rem;border-bottom:2px solid var(--color-primary);margin-bottom:1.5rem;display:flex;align-items:baseline;gap:.75rem;}
+    .year-count-tag{font-family:var(--font-body);font-size:var(--text-sm);font-weight:400;color:var(--color-text-muted);}
+    .pub-item{border:1px solid var(--color-divider);border-radius:var(--radius-lg);background:var(--color-surface);margin-bottom:1rem;overflow:hidden;transition:box-shadow var(--transition);}
+    .pub-item:hover{box-shadow:var(--shadow-sm);}
+    .pub-item[hidden]{display:none;}
+    .pub-main{padding:1.5rem;}
+    .pub-meta-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem;}
+    .pub-badge{font-size:var(--text-xs);font-weight:600;padding:2px .75rem;border-radius:9999px;}
+    .pub-badge.journal{background:var(--color-accent-muted);color:var(--color-accent);}
+    .pub-badge.under-review{background:var(--color-review-bg);color:var(--color-review);}
+    .pub-badge.chapter{background:var(--color-published-bg);color:var(--color-published);}
+    .pub-journal{font-size:var(--text-xs);color:var(--color-text-muted);font-style:italic;}
+    .pub-if{font-size:var(--text-xs);font-weight:600;color:var(--color-text-faint);}
+    .pub-title{font-family:var(--font-display);font-size:var(--text-lg);font-weight:600;color:var(--color-text);line-height:1.3;margin-bottom:.5rem;}
+    .pub-authors{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;margin-bottom:1rem;}
+    .pub-authors strong{color:var(--color-text);font-weight:600;}
+    .pub-actions{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;}
+    .pub-doi-link{font-size:var(--text-xs);font-weight:500;color:var(--color-accent);text-decoration:none;display:flex;align-items:center;gap:.25rem;}
+    .pub-doi-link:hover{text-decoration:underline;}
+    .bibtex-btn{font-size:var(--text-xs);font-weight:600;padding:.25rem .75rem;border:1px solid var(--color-border);border-radius:9999px;color:var(--color-text-muted);cursor:pointer;display:flex;align-items:center;gap:.25rem;transition:all var(--transition);}
+    .bibtex-btn:hover{border-color:var(--color-accent);color:var(--color-accent);background:var(--color-accent-muted);}
+    .bibtex-panel{display:none;border-top:1px solid var(--color-divider);background:var(--color-surface-offset);padding:1.25rem 1.5rem;}
+    .bibtex-panel.open{display:block;}
+    .bibtex-panel pre{font-family:var(--font-mono);font-size:var(--text-xs);color:var(--color-text-muted);white-space:pre-wrap;word-break:break-all;line-height:1.75;}
+    .bibtex-copy{display:inline-flex;align-items:center;gap:.25rem;font-size:var(--text-xs);font-weight:600;color:var(--color-accent);cursor:pointer;margin-bottom:.75rem;background:none;border:none;padding:0;}
+    .bibtex-copy:hover{text-decoration:underline;}
+    .no-results{text-align:center;padding:5rem 2rem;color:var(--color-text-muted);}
+    .no-results h3{font-family:var(--font-display);color:var(--color-text);margin-bottom:.5rem;}
+
+    /* PROJECTS */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(340px,100%),1fr));gap:1.5rem;}
+    .project-card{background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-xl);padding:1.5rem;display:flex;flex-direction:column;transition:box-shadow var(--transition),transform var(--transition);}
+    .project-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+    .project-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;}
+    .status-badge{display:inline-flex;align-items:center;font-size:var(--text-xs);font-weight:700;padding:.2rem .75rem;border-radius:9999px;white-space:nowrap;flex-shrink:0;}
+    .status-badge.ongoing{background:var(--color-ongoing-bg);color:var(--color-ongoing);}
+    .status-badge.in-review{background:var(--color-review-bg);color:var(--color-review);}
+    .status-badge.complete{background:var(--color-complete-bg);color:var(--color-complete);}
+    .project-num{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--color-divider);line-height:1;}
+    .project-title{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:.75rem;line-height:1.3;}
+    .project-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;flex:1;margin-bottom:1.25rem;}
+    .project-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;}
+    .project-tag{font-size:var(--text-xs);padding:.2rem .75rem;background:var(--color-surface-offset);color:var(--color-text-muted);border-radius:9999px;border:1px solid var(--color-border);}
+    .project-funding{font-size:var(--text-xs);color:var(--color-text-faint);padding-top:1rem;border-top:1px solid var(--color-divider);}
+    .project-funding strong{color:var(--color-text-muted);}
+
+    /* RESOURCES */
+    .resource-section{margin-bottom:3rem;}
+    .resource-group-title{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--color-divider);}
+    .resource-list{display:flex;flex-direction:column;gap:.75rem;}
+    .resource-item{display:flex;align-items:flex-start;gap:1rem;padding:1.25rem;background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-lg);text-decoration:none;transition:box-shadow var(--transition),transform var(--transition),border-color var(--transition);}
+    .resource-item:hover{box-shadow:var(--shadow-md);transform:translateX(4px);border-color:var(--color-accent);}
+    .res-icon{width:38px;height:38px;flex-shrink:0;background:var(--color-surface-offset);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-accent);}
+    .res-body{flex:1;}
+    .res-name{font-weight:600;font-size:var(--text-base);color:var(--color-text);margin-bottom:.25rem;}
+    .res-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.5;}
+    .res-url{font-size:var(--text-xs);color:var(--color-accent);margin-top:.5rem;}
+    .res-arrow{color:var(--color-text-faint);flex-shrink:0;margin-top:2px;}
+    .resource-item:hover .res-arrow{color:var(--color-accent);}
+
+    /* CV */
+    .cv-page-wrap{padding:clamp(3rem,6vw,5rem) 0;}
+    .cv-download-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;background:var(--color-primary);border-radius:var(--radius-xl);padding:1.5rem 2rem;margin-bottom:3rem;}
+    .cv-dl-info h3{font-size:var(--text-lg);color:#fff;margin-bottom:.25rem;}
+    .cv-dl-info p{font-size:var(--text-sm);color:rgba(255,255,255,.65);max-width:100%;}
+    .cv-section{margin-bottom:3rem;}
+    .cv-section-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--color-text);margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--color-primary);}
+    .cv-row{display:grid;grid-template-columns:170px 1fr;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--color-divider);}
+    .cv-row:last-child{border-bottom:none;}
+    .cv-date{font-size:var(--text-sm);color:var(--color-text-muted);font-weight:500;}
+    .cv-detail h4{font-family:var(--font-display);font-size:var(--text-base);font-weight:600;color:var(--color-text);margin-bottom:.25rem;}
+    .cv-detail p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;max-width:100%;}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(190px,100%),1fr));gap:1.25rem;}
+    .skill-group h4{font-size:var(--text-sm);font-weight:700;color:var(--color-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:.5rem;}
+    .skill-tag{font-size:var(--text-xs);padding:.2rem .75rem;background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:9999px;color:var(--color-text-muted);}
+    @media(max-width:640px){.cv-row{grid-template-columns:1fr;gap:.5rem;}}
+
+    /* FOOTER */
+    .site-footer{background:var(--color-primary);color:rgba(255,255,255,.75);padding:2.5rem 0;margin-top:clamp(4rem,6vw,6rem);}
+    .footer-inner{max-width:var(--content-wide);margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
+    .footer-name{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:#fff;margin-bottom:.25rem;}
+    .footer-role{font-size:var(--text-sm);color:rgba(255,255,255,.55);}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+    .footer-links a{font-size:var(--text-sm);color:rgba(255,255,255,.55);text-decoration:none;transition:color var(--transition);}
+    .footer-links a:hover{color:#fff;}
+    .footer-copy{width:100%;font-size:var(--text-xs);color:rgba(255,255,255,.35);padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);margin-top:1.5rem;}
+    @media(max-width:640px){.footer-inner{flex-direction:column;align-items:flex-start;}}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="sr-only">Skip to content</a>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" onclick="navigate('home');return false;">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-label="DG Logo">
+        <rect width="34" height="34" rx="7" fill="#0f1b2d"/>
+        <text x="17" y="23" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="13" font-weight="700" fill="white">DG</text>
+        <circle cx="27" cy="7" r="2.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <line x1="22.5" y1="10.5" x2="13" y2="19" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      </svg>
+      <div>
+        <div class="nav-logo-text">Dr. Deepak Gupta</div>
+        <div class="nav-logo-sub">Penn State University</div>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#home" onclick="navigate('home');return false;" class="active" data-page="home">Home</a></li>
+      <li><a href="#publications" onclick="navigate('publications');return false;" data-page="publications">Publications</a></li>
+      <li><a href="#projects" onclick="navigate('projects');return false;" data-page="projects">Projects</a></li>
+      <li><a href="#resources" onclick="navigate('resources');return false;" data-page="resources">Resources</a></li>
+      <li><a href="#cv" onclick="navigate('cv');return false;" data-page="cv">CV</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-theme" data-theme-toggle aria-label="Toggle dark mode">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="https://orcid.org/0000-0003-0069-7488" class="btn-orcid" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu" role="navigation">
+  <a href="#home" onclick="navigate('home');toggleMobileMenu();" data-page="home">Home</a>
+  <a href="#publications" onclick="navigate('publications');toggleMobileMenu();" data-page="publications">Publications</a>
+  <a href="#projects" onclick="navigate('projects');toggleMobileMenu();" data-page="projects">Projects</a>
+  <a href="#resources" onclick="navigate('resources');toggleMobileMenu();" data-page="resources">Resources</a>
+  <a href="#cv" onclick="navigate('cv');toggleMobileMenu();" data-page="cv">CV</a>
+</div>
+
+<main id="main-content">
+
+  <!-- HOME PAGE -->
+  <section id="page-home" class="page-section active" role="main">
+    <div class="hero" role="banner">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge"><span class="hero-dot" aria-hidden="true"></span>Open to collaborations &amp; faculty positions</div>
+          <h1 class="hero-name">Dr. Deepak Gupta</h1>
+          <p class="hero-title-line">Postdoctoral Researcher · Engineering Science &amp; Mechanics<br>Pennsylvania State University</p>
+          <p class="hero-bio">I engineer living tissues — using 3D bioprinting, biomaterials, and precision manufacturing to build vascularized scaffolds that bridge lab science and clinical translation. My work spans bone reconstruction, organ-on-a-chip models, and the first-ever "printing with air" technology published in <em>Nature</em>.</p>
+          <div class="hero-stats" aria-label="Research metrics">
+            <div class="stat"><div class="stat-num">22+</div><div class="stat-label">Publications</div></div>
+            <div class="stat"><div class="stat-num">450+</div><div class="stat-label">Citations</div></div>
+            <div class="stat"><div class="stat-num">$3M+</div><div class="stat-label">Grants</div></div>
+            <div class="stat"><div class="stat-num">5</div><div class="stat-label">Patents</div></div>
+          </div>
+          <div class="hero-ctas">
+            <a href="#publications" class="btn-hero-primary" onclick="navigate('publications');return false;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              View Publications
+            </a>
+            <a href="#cv" class="btn-hero-secondary" onclick="navigate('cv');return false;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Full CV
+            </a>
+            <a href="mailto:dpg5504@psu.edu" class="btn-hero-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Contact
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar" aria-label="Profile picture placeholder">
+          <div class="avatar-frame">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="avatar-label">Profile Photo<br>Placeholder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Interests -->
+    <section class="interests-section" aria-labelledby="interests-heading">
+      <div class="container">
+        <p class="eyebrow">Research Focus</p>
+        <h2 id="interests-heading" style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--color-text);margin-bottom:.5rem;">Research Interests</h2>
+        <p style="color:var(--color-text-muted);font-size:var(--text-sm);max-width:60ch;">Bridging materials science, biology, and engineering to create functional living constructs for regenerative medicine and disease modelling.</p>
+        <div class="interests-grid" role="list">
+          <div class="interest-card" role="listitem"><div class="int-name">3D &amp; 4D Bioprinting</div><div class="int-desc">Multi-arm and droplet-based bioprinters; embedded printing; 6-axis robotic arm bioprinting for intraoperative use.</div></div>
+          <div class="interest-card" role="listitem"><div class="int-name">Tissue Engineering</div><div class="int-desc">Bone, vascular, corneal, and muscle tissue fabrication; hierarchical scaffold design inspired by natural ECM architecture.</div></div>
+          <div class="interest-card" role="listitem"><div class="int-name">Biomaterials</div><div class="int-desc">Hydrogels, polymers, ceramics, and composites; stimuli-responsive microgels; bioinks with precise rheological properties.</div></div>
+          <div class="interest-card" role="listitem"><div class="int-name">Vascularization Strategies</div><div class="int-desc">"3D Printing of Air" — hollow channel networks; perfusable tissue constructs; microgel-based angiogenesis models.</div></div>
+          <div class="interest-card" role="listitem"><div class="int-name">Disease Modelling</div><div class="int-desc">Organ-on-a-chip platforms; tumour microenvironment models; in-vitro tissue models for drug testing.</div></div>
+          <div class="interest-card" role="listitem"><div class="int-name">Microfluidics &amp; Microgels</div><div class="int-desc">High-throughput microgel fabrication; co-axial jetting; ion-responsive and shape-morphing microgel systems.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News / Highlights -->
+    <section class="news-strip" aria-labelledby="news-heading">
+      <div class="container">
+        <p class="eyebrow">Recent Highlights</p>
+        <h2 id="news-heading" style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--color-text);margin-bottom:.5rem;">News &amp; Updates</h2>
+        <div class="news-grid" role="list">
+          <article class="news-card" role="listitem"><div class="news-year">2025</div><div class="news-title">Nature paper "3D Printing of Air" under review — pioneering air as bioink for perfusable vascularized tissues.</div></article>
+          <article class="news-card" role="listitem"><div class="news-year">2025</div><div class="news-title">Invited WPSU Podcast by Penn State Public Broadcasting on bioprinting research outreach.</div></article>
+          <article class="news-card" role="listitem"><div class="news-year">2025</div><div class="news-title">Nature Reviews Methods Primers paper on droplet-based bioprinting published (IF 66.9).</div></article>
+          <article class="news-card" role="listitem"><div class="news-year">2024</div><div class="news-title">NIH $3M grant awarded for 3D Printing of Air — vascularized tissue fabrication (2024–2028).</div></article>
+          <article class="news-card" role="listitem"><div class="news-year">2025</div><div class="news-title">MRI $50K grant awarded for 4D Bioprinting of bioactive self-actuated microgel-based vascularized muscle.</div></article>
+          <article class="news-card" role="listitem"><div class="news-year">2025</div><div class="news-title">Semester course "Bioprinting, ESC-518" taught at Engineering Science &amp; Mechanics, Penn State.</div></article>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- PUBLICATIONS PAGE -->
+  <section id="page-publications" class="page-section" aria-label="Publications">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Scholarly Output</p>
+        <h1 class="section-title">Publications</h1>
+        <p class="section-desc">22 peer-reviewed articles, 1 book chapter, and 5 patents. &gt;450 citations. Contributions to <em>Nature</em>, <em>Nature Reviews Methods Primers</em>, <em>Advanced Functional Materials</em>, and more.</p>
+      </div>
+
+      <div class="pub-controls" role="search" aria-label="Filter publications">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" class="pub-search" id="pub-search" placeholder="Search by title, author, journal, keyword…" aria-label="Search publications" autocomplete="off">
+        </div>
+        <div class="filter-btns" role="group" aria-label="Filter by type">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="journal">Journal Articles</button>
+          <button class="filter-btn" data-filter="under-review">Under Review</button>
+          <button class="filter-btn" data-filter="chapter">Book Chapter</button>
+        </div>
+      </div>
+      <p class="pub-count" id="pub-count" aria-live="polite"><span id="pub-visible-count">22</span> publications shown</p>
+      <div id="pub-list" aria-label="Publications list">
+
+        <!-- 2026 -->
+        <div class="pub-year-group" data-year="2026">
+          <h2 class="year-label">2026 <span class="year-count-tag">2 articles</span></h2>
+          <article class="pub-item" data-type="journal" data-keywords="microvalve bioprinting biofabrication toolbox">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Biofabrication</span>
+                <span class="pub-if">IF 8.0</span>
+              </div>
+              <h3 class="pub-title">A toolbox for microvalve-based bioprinting</h3>
+              <p class="pub-authors">Deniz Derman, Medine Sarikaya, Yasar Yilmaz, <strong>Deepak Gupta</strong>, Syed Rizvi, Taino Rivera, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1088/1758-5090/ae54d1" class="pub-doi-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  DOI: 10.1088/1758-5090/ae54d1
+                </a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy to clipboard
+              </button>
+              <pre>@article{Derman2026toolbox,
+  author  = {Derman, Deniz and Sarikaya, Medine and Yilmaz, Yasar and Gupta, Deepak and Rizvi, Syed and Rivera, Taino and Ozbolat, Ibrahim},
+  title   = {A toolbox for microvalve-based bioprinting},
+  journal = {Biofabrication},
+  year    = {2026},
+  doi     = {10.1088/1758-5090/ae54d1}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="step-ladder bioprinting collagen fibers anisotropic small">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Small</span>
+                <span class="pub-if">IF 12.1</span>
+              </div>
+              <h3 class="pub-title">Step-Ladder Bioprinting to Align Collagen Fibers for Anisotropic Tissue Fabrication</h3>
+              <p class="pub-authors">Ilayda Namli, Yogendra Singh, <strong>Deepak Gupta</strong>, Syed Rizvi, Yasar Yilmaz, Joao Robazzi, Medine Sarikaya, Mehmet Baykara, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/smll.202510498" class="pub-doi-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  DOI: 10.1002/smll.202510498
+                </a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy to clipboard
+              </button>
+              <pre>@article{Namli2026stepladder,
+  author  = {Namli, Ilayda and Singh, Yogendra and Gupta, Deepak and Rizvi, Syed and Yilmaz, Yasar and Robazzi, Joao and Sarikaya, Medine and Baykara, Mehmet and Ozbolat, Ibrahim},
+  title   = {Step-Ladder Bioprinting to Align Collagen Fibers for Anisotropic Tissue Fabrication},
+  journal = {Small},
+  year    = {2026},
+  doi     = {10.1002/smll.202510498}
+}</pre>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2025 -->
+        <div class="pub-year-group" data-year="2025">
+          <h2 class="year-label">2025 <span class="year-count-tag">8 articles</span></h2>
+
+          <article class="pub-item" data-type="journal" data-keywords="droplet bioprinting nature reviews methods primers">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Nature Reviews Methods Primers</span>
+                <span class="pub-if">IF 66.9</span>
+              </div>
+              <h3 class="pub-title">Droplet-based Bioprinting</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Irem Derman, Changxue Xu, Yong Huang, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1038/s43586-025-00394-y" class="pub-doi-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  DOI: 10.1038/s43586-025-00394-y
+                </a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Gupta2025droplet,
+  author  = {Gupta, Deepak and Derman, Irem and Xu, Changxue and Huang, Yong and Ozbolat, Ibrahim},
+  title   = {Droplet-based Bioprinting},
+  journal = {Nature Reviews Methods Primers},
+  year    = {2025},
+  doi     = {10.1038/s43586-025-00394-y}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="under-review" data-keywords="3D printing air vascularized nature bioink hollow channels">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge under-review">Under Review</span>
+                <span class="pub-journal">Nature</span>
+                <span class="pub-if">IF 55.0</span>
+              </div>
+              <h3 class="pub-title">3D Printing of Air</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Henrique Piva, Vaibhav Pal, Suihong Li, Syed Rizvi, Mecit Alioglu, Yasar Yilmaz, Annie Smith, Logan Haugh, Joao Robazzi, Jade Sency, Myoung Kim, Thomas Neuberger, Francesco Costanzo, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <span style="font-size:var(--text-xs);color:var(--color-text-faint);font-style:italic;">Manuscript under review · 2025</span>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@unpublished{Gupta2025air,
+  author = {Gupta, Deepak and Piva, Henrique and Pal, Vaibhav and Li, Suihong and Ozbolat, Ibrahim},
+  title  = {3D Printing of Air},
+  year   = {2025},
+  note   = {Under review, Nature}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="intraoperative bioprinting craniomaxillofacial bone reconstruction sheep robotic">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Small Science</span>
+                <span class="pub-if">IF 11.1</span>
+              </div>
+              <h3 class="pub-title">Intraoperative bioprinting for craniomaxillofacial bone reconstruction in rats and sheep</h3>
+              <p class="pub-authors">Miji Yeo*, <strong>Deepak Gupta*</strong>, Irem Derman, Sendegul Yildirim, Yogendra Singh, Ethan Gerhard, Elias Rizk, Thomas Neuberger, Ibrahim Ozbolat <em>(*equal contribution)</em></p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/smsc.202400621" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/smsc.202400621</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Yeo2025intraoperative,
+  author  = {Yeo, Miji and Gupta, Deepak and Derman, Irem and Yildirim, Sendegul and Singh, Yogendra and Gerhard, Ethan and Rizk, Elias and Neuberger, Thomas and Ozbolat, Ibrahim},
+  title   = {Intraoperative bioprinting for craniomaxillofacial bone reconstruction in rats and sheep},
+  journal = {Small Science},
+  year    = {2025},
+  doi     = {10.1002/smsc.202400621}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="microgels 4D bioprinting ion-responsive interparticle crosslinked small">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Small</span>
+                <span class="pub-if">IF 12.1</span>
+              </div>
+              <h3 class="pub-title">Interparticle Crosslinked Ion-responsive Microgels for 3D and 4D (Bio)printing Applications</h3>
+              <p class="pub-authors">Vaibhav Pal, <strong>Deepak Gupta</strong>, Suihong Liu, Ilayda Namli, Syed Rizvi, Yasar Yilmaz, Logan Haugh, Ethan Gerhard, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/smll.202502262" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/smll.202502262</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Pal2025microgels,
+  author  = {Pal, Vaibhav and Gupta, Deepak and Liu, Suihong and Namli, Ilayda and Rizvi, Syed and Yilmaz, Yasar and Haugh, Logan and Gerhard, Ethan and Ozbolat, Ibrahim},
+  title   = {Interparticle Crosslinked Ion-responsive Microgels for 3D and 4D (Bio)printing Applications},
+  journal = {Small},
+  year    = {2025},
+  doi     = {10.1002/smll.202502262}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="corneal tissue bioprinting advanced healthcare materials restoration">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Advanced Healthcare Materials</span>
+                <span class="pub-if">IF 9.6</span>
+              </div>
+              <h3 class="pub-title">Progressive Insights into 3D Bioprinting for Corneal Tissue Restoration</h3>
+              <p class="pub-authors">Ilayda Namli, <strong>Deepak Gupta</strong>, Yogendra Singh, Pallab Datta, Muhammad Rizwan, Mehmet Baykara, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/adhm.202503372" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/adhm.202503372</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Namli2025corneal,
+  author  = {Namli, Ilayda and Gupta, Deepak and Singh, Yogendra and Datta, Pallab and Rizwan, Muhammad and Baykara, Mehmet and Ozbolat, Ibrahim},
+  title   = {Progressive Insights into 3D Bioprinting for Corneal Tissue Restoration},
+  journal = {Advanced Healthcare Materials},
+  year    = {2025},
+  doi     = {10.1002/adhm.202503372}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="artificial intelligence AI 3D bioprinting advanced functional materials precision">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Advanced Functional Materials</span>
+                <span class="pub-if">IF 18.5</span>
+              </div>
+              <h3 class="pub-title">The Synergy of Artificial Intelligence and 3D Bioprinting: Unlocking New Frontiers in Precision Tissue Fabrication</h3>
+              <p class="pub-authors">Joao Robazzi*, Irem Derman*, <strong>Deepak Gupta</strong>, Logan Haugh, Yogendra Singh, Vaibhav Pal, Suihong Liu, Yasar Yilmaz, Andre Dias, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/adfm.202509530" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/adfm.202509530</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Robazzi2025aisynergy,
+  author  = {Robazzi, Joao and Derman, Irem and Gupta, Deepak and Haugh, Logan and Singh, Yogendra and Pal, Vaibhav and Liu, Suihong and Yilmaz, Yasar and Dias, Andre and Ozbolat, Ibrahim},
+  title   = {The Synergy of Artificial Intelligence and 3D Bioprinting},
+  journal = {Advanced Functional Materials},
+  year    = {2025},
+  doi     = {10.1002/adfm.202509530}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="under-review" data-keywords="biofabrication high-throughput systems integration bioactive materials under review">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge under-review">Revision Submitted</span>
+                <span class="pub-journal">Bioactive Materials</span>
+                <span class="pub-if">IF 20.3</span>
+              </div>
+              <h3 class="pub-title">Traversing New Frontiers through Systems Integration in High-throughput Platforms for Advanced Biofabrication and Therapeutics</h3>
+              <p class="pub-authors">Yogendra Singh*, Joseph Moses*, <strong>Deepak Gupta</strong>, Myoung Kim, Vaibhav Pal</p>
+              <div class="pub-actions">
+                <span style="font-size:var(--text-xs);color:var(--color-text-faint);font-style:italic;">Revision submitted · 2025</span>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@unpublished{Singh2025highthroughput,
+  author = {Singh, Yogendra and Moses, Joseph and Gupta, Deepak and Kim, Myoung and Pal, Vaibhav},
+  title  = {Traversing New Frontiers through Systems Integration in High-throughput Platforms for Advanced Biofabrication and Therapeutics},
+  year   = {2025},
+  note   = {Revision submitted, Bioactive Materials}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="under-review" data-keywords="step-ladder collagen anisotropic tissue bioprinting small revision">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge under-review">Revision Received</span>
+                <span class="pub-journal">Small</span>
+                <span class="pub-if">IF 13.0</span>
+              </div>
+              <h3 class="pub-title">Step-Ladder Bioprinting to Align Collagen Fibers for Anisotropic Tissue Fabrication (Revision)</h3>
+              <p class="pub-authors">Ilayda Namli, Yogendra Singh, <strong>Deepak Gupta</strong>, Syed Rizvi, Yasar Yilmaz, Joao Robazzi, Medine Sarikaya, Mehmet Baykara, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <span style="font-size:var(--text-xs);color:var(--color-text-faint);font-style:italic;">Revision received · 2025</span>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@unpublished{Namli2025stepladder2,
+  author = {Namli, Ilayda and Singh, Yogendra and Gupta, Deepak and Ozbolat, Ibrahim},
+  title  = {Step-Ladder Bioprinting to Align Collagen Fibers for Anisotropic Tissue Fabrication},
+  year   = {2025},
+  note   = {Revision received, Small}
+}</pre>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2024 -->
+        <div class="pub-year-group" data-year="2024">
+          <h2 class="year-label">2024 <span class="year-count-tag">2 articles</span></h2>
+          <article class="pub-item" data-type="journal" data-keywords="embedded bioprinting process parameters advanced functional materials shapes high quality">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Advanced Functional Materials</span>
+                <span class="pub-if">IF 18.5</span>
+              </div>
+              <h3 class="pub-title">Dissecting the Interplay Mechanism among Process Parameters toward the Biofabrication of High-Quality Shapes in Embedded Bioprinting</h3>
+              <p class="pub-authors">Yang Wu, Xue Yang, <strong>Deepak Gupta</strong>, Mecit Alioglu, Minghao Qin, Veli Ozbolat, Yao Li, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/adfm.202313088" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/adfm.202313088</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Wu2024embedded,
+  author  = {Wu, Yang and Yang, Xue and Gupta, Deepak and Alioglu, Mecit and Qin, Minghao and Ozbolat, Veli and Li, Yao and Ozbolat, Ibrahim},
+  title   = {Dissecting the Interplay Mechanism among Process Parameters toward the Biofabrication of High-Quality Shapes in Embedded Bioprinting},
+  journal = {Advanced Functional Materials},
+  year    = {2024},
+  doi     = {10.1002/adfm.202313088}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="silicone photocrosslinkable composite 3D printing advanced materials technologies">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Advanced Materials Technologies</span>
+                <span class="pub-if">IF 7.4</span>
+              </div>
+              <h3 class="pub-title">A Versatile Photocrosslinkable Silicone Composite for 3D Printing Applications</h3>
+              <p class="pub-authors">Mecit Alioglu, Yasar Yilmaz, Ethan Gerhard, Vaibhav Pal, <strong>Deepak Gupta</strong>, Syed Rizvi, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/admt.202301858" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/admt.202301858</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Alioglu2024silicone,
+  author  = {Alioglu, Mecit and Yilmaz, Yasar and Gerhard, Ethan and Pal, Vaibhav and Gupta, Deepak and Rizvi, Syed and Ozbolat, Ibrahim},
+  title   = {A Versatile Photocrosslinkable Silicone Composite for 3D Printing Applications},
+  journal = {Advanced Materials Technologies},
+  year    = {2024},
+  doi     = {10.1002/admt.202301858}
+}</pre>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2023 -->
+        <div class="pub-year-group" data-year="2023">
+          <h2 class="year-label">2023 <span class="year-count-tag">5 articles</span></h2>
+
+          <article class="pub-item" data-type="journal" data-keywords="cancer immunity 3D bioprinting frontiers immunology tumour">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Frontiers in Immunology</span>
+                <span class="pub-if">IF 5.9</span>
+              </div>
+              <h3 class="pub-title">Innovative 3D technologies in cancer immunity research and therapy</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Boris Chichkov, Zoltan Vereb, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3389/fimmu.2023.1235483" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.3389/fimmu.2023.1235483</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Gupta2023cancer,
+  author  = {Gupta, Deepak and Chichkov, Boris and Vereb, Zoltan and Ozbolat, Ibrahim},
+  title   = {Innovative 3D technologies in cancer immunity research and therapy},
+  journal = {Frontiers in Immunology},
+  year    = {2023},
+  doi     = {10.3389/fimmu.2023.1235483}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="nested biofabrication matryoshka intra-embedded small methods">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Small Methods</span>
+                <span class="pub-if">IF 9.1</span>
+              </div>
+              <h3 class="pub-title">Nested Biofabrication: Matryoshka-Inspired Intra-Embedded Bioprinting</h3>
+              <p class="pub-authors">Mecit Alioglu*, Yasar Yilmaz*, Yogendra Singh*, Momoka Nagamine, Nazmiye Celik, Myoung Kim, Vaibhav Pal, <strong>Deepak Gupta</strong>, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1002/smtd.202301325" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1002/smtd.202301325</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Alioglu2023matryoshka,
+  author  = {Alioglu, Mecit and Yilmaz, Yasar and Singh, Yogendra and Nagamine, Momoka and Celik, Nazmiye and Kim, Myoung and Pal, Vaibhav and Gupta, Deepak and Ozbolat, Ibrahim},
+  title   = {Nested Biofabrication: Matryoshka-Inspired Intra-Embedded Bioprinting},
+  journal = {Small Methods},
+  year    = {2023},
+  doi     = {10.1002/smtd.202301325}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="bone scaffold PCL gel core-shell triple-layered 3D printed biomedical materials">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Biomedical Materials</span>
+                <span class="pub-if">IF 3.9</span>
+              </div>
+              <h3 class="pub-title">Natural bone inspired core-shell triple-layered gel/PCL/gel 3D printed scaffolds for bone tissue engineering</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Atul Singh, Jayesh Bellare</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1088/1748-605x/ad06c2" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1088/1748-605x/ad06c2</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Gupta2023coreshell,
+  author  = {Gupta, Deepak and Singh, Atul and Bellare, Jayesh},
+  title   = {Natural bone inspired core-shell triple-layered gel/PCL/gel 3D printed scaffolds for bone tissue engineering},
+  journal = {Biomedical Materials},
+  year    = {2023},
+  doi     = {10.1088/1748-605x/ad06c2}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="microgel biofabrication high-throughput air-assisted coaxial jetting cell encapsulation biofabrication">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge journal">Journal Article</span>
+                <span class="pub-journal">Biofabrication</span>
+                <span class="pub-if">IF 8.0</span>
+              </div>
+              <h3 class="pub-title">High-throughput microgel biofabrication via air-assisted co-axial jetting for cell encapsulation, 3D bioprinting, and scaffolding applications</h3>
+              <p class="pub-authors">Vaibhav Pal, Yogendra Singh, <strong>Deepak Gupta</strong>, Mecit Alioglu, Momoka Nagamine, Myoung Kim, Ibrahim Ozbolat</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1088/1758-5090/acc4eb" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1088/1758-5090/acc4eb</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@article{Pal2023microgel,
+  author  = {Pal, Vaibhav and Singh, Yogendra and Gupta, Deepak and Alioglu, Mecit and Nagamine, Momoka and Kim, Myoung and Ozbolat, Ibrahim},
+  title   = {High-throughput microgel biofabrication via air-assisted co-axial jetting},
+  journal = {Biofabrication},
+  year    = {2023},
+  doi     = {10.1088/1758-5090/acc4eb}
+}</pre>
+            </div>
+          </article>
+
+          <article class="pub-item" data-type="chapter" data-keywords="book chapter additive manufacturing biomimicry biomedical elsevier material selection">
+            <div class="pub-main">
+              <div class="pub-meta-row">
+                <span class="pub-badge chapter">Book Chapter</span>
+                <span class="pub-journal">Elsevier — Advances in Additive Manufacturing</span>
+              </div>
+              <h3 class="pub-title">Material Selection and Processing Challenges with Additive Manufacturing in Biomimicry for Biomedical Applications</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Jayesh Bellare</p>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1016/b978-0-323-91834-3.00020-x" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1016/b978-0-323-91834-3.00020-x</a>
+                <button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button>
+              </div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation">
+              <button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button>
+              <pre>@incollection{Gupta2023chapter,
+  author    = {Gupta, Deepak and Bellare, Jayesh},
+  title     = {Material Selection and Processing Challenges with Additive Manufacturing in Biomimicry for Biomedical Applications},
+  booktitle = {Advances in Additive Manufacturing: Artificial Intelligence, Nature Inspired and Bio-Manufacturing},
+  publisher = {Elsevier},
+  year      = {2023},
+  pages     = {431--448},
+  doi       = {10.1016/b978-0-323-91834-3.00020-x}
+}</pre>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2019-2021 -->
+        <div class="pub-year-group" data-year="2021">
+          <h2 class="year-label">2019–2021 <span class="year-count-tag">5 articles</span></h2>
+
+          <article class="pub-item" data-type="journal" data-keywords="bioprinting robotic arm PCL gel customized bone">
+            <div class="pub-main">
+              <div class="pub-meta-row"><span class="pub-badge journal">Journal Article</span><span class="pub-journal">Bioprinting</span><span class="pub-if">IF 6.9</span></div>
+              <h3 class="pub-title">Highly controlled robotic customised gel functionalization on 3D printed PCL framework for bone tissue engineering</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Jayesh Bellare</p>
+              <div class="pub-actions"><a href="https://doi.org/10.1016/j.bprint.2021.e00175" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1016/j.bprint.2021.e00175</a><button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button></div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation"><button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button><pre>@article{Gupta2021robotic,author={Gupta,Deepak and Bellare,Jayesh},title={Highly controlled robotic customised gel functionalization on 3D printed PCL framework for bone tissue engineering},journal={Bioprinting},year={2021},doi={10.1016/j.bprint.2021.e00175}}</pre></div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="gellan gelatin composite multiscale porosity bone biomedical materials 36 citations">
+            <div class="pub-main">
+              <div class="pub-meta-row"><span class="pub-badge journal">Journal Article</span><span class="pub-journal">Biomedical Materials</span><span class="pub-if">IF 3.9</span></div>
+              <h3 class="pub-title">Multiscale porosity in a 3D printed gellan–gelatin composite for bone tissue engineering</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Priya Vashisth, Jayesh Bellare</p>
+              <div class="pub-actions"><a href="https://doi.org/10.1088/1748-605x/abf1a7" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1088/1748-605x/abf1a7</a><button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button></div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation"><button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button><pre>@article{Gupta2021gellan,author={Gupta,Deepak and Vashisth,Priya and Bellare,Jayesh},title={Multiscale porosity in a 3D printed gellan-gelatin composite for bone tissue engineering},journal={Biomedical Materials},year={2021},doi={10.1088/1748-605x/abf1a7}}</pre></div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="ethanol fibroblast dose-response toxicology reports cell behaviour">
+            <div class="pub-main">
+              <div class="pub-meta-row"><span class="pub-badge journal">Journal Article</span><span class="pub-journal">Toxicology Reports</span><span class="pub-if">IF 3.8</span></div>
+              <h3 class="pub-title">Ethanol affects fibroblast behaviour differentially at low and high doses: A comprehensive, dose-response evaluation</h3>
+              <p class="pub-authors">Neelakshi Kar, <strong>Deepak Gupta</strong>, Jayesh Bellare</p>
+              <div class="pub-actions"><a href="https://doi.org/10.1016/j.toxrep.2021.05.007" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1016/j.toxrep.2021.05.007</a><button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button></div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation"><button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button><pre>@article{Kar2021ethanol,author={Kar,Neelakshi and Gupta,Deepak and Bellare,Jayesh},title={Ethanol affects fibroblast behaviour differentially at low and high doses},journal={Toxicology Reports},year={2021},doi={10.1016/j.toxrep.2021.05.007}}</pre></div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="quercetin scaffold neural tissue engineering ACS Omega 3D patterned">
+            <div class="pub-main">
+              <div class="pub-meta-row"><span class="pub-badge journal">Journal Article</span><span class="pub-journal">ACS Omega</span><span class="pub-if">IF 4.3</span></div>
+              <h3 class="pub-title">Three Dimensional Quercetin-Functionalized Patterned Scaffold: Development, Characterization, and In Vitro Assessment for Neural Tissue Engineering</h3>
+              <p class="pub-authors">Priya Vashisth, Neelakshi Kar, <strong>Deepak Gupta</strong>, Jayesh Bellare</p>
+              <div class="pub-actions"><a href="https://doi.org/10.1021/acsomega.0c02678" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1021/acsomega.0c02678</a><button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button></div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation"><button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button><pre>@article{Vashisth2020quercetin,author={Vashisth,Priya and Kar,Neelakshi and Gupta,Deepak and Bellare,Jayesh},title={Three Dimensional Quercetin-Functionalized Patterned Scaffold for Neural Tissue Engineering},journal={ACS Omega},year={2020},doi={10.1021/acsomega.0c02678}}</pre></div>
+          </article>
+
+          <article class="pub-item" data-type="journal" data-keywords="cryogenic 3D printed gel bone ACS applied materials interfaces compressible porosity 66 citations">
+            <div class="pub-main">
+              <div class="pub-meta-row"><span class="pub-badge journal">Journal Article</span><span class="pub-journal">ACS Applied Materials &amp; Interfaces</span><span class="pub-if">IF 8.5</span></div>
+              <h3 class="pub-title">Multiscale Porosity in Compressible Cryogenically 3D Printed Gels for Bone Tissue Engineering</h3>
+              <p class="pub-authors"><strong>Deepak Gupta</strong>, Atul Singh, Ashwin Dravid, Jayesh Bellare</p>
+              <div class="pub-actions"><a href="https://doi.org/10.1021/acsami.9b05460" class="pub-doi-link" target="_blank" rel="noopener noreferrer"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>DOI: 10.1021/acsami.9b05460</a><button class="bibtex-btn" onclick="toggleBibtex(this)" aria-expanded="false"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>BibTeX</button></div>
+            </div>
+            <div class="bibtex-panel" role="region" aria-label="BibTeX citation"><button class="bibtex-copy" onclick="copyBibtex(this)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy to clipboard</button><pre>@article{Gupta2019cryogenic,author={Gupta,Deepak and Singh,Atul and Dravid,Ashwin and Bellare,Jayesh},title={Multiscale Porosity in Compressible Cryogenically 3D Printed Gels for Bone Tissue Engineering},journal={ACS Applied Materials and Interfaces},year={2019},doi={10.1021/acsami.9b05460}}</pre></div>
+          </article>
+        </div>
+
+        <div id="no-results" class="no-results" hidden>
+          <h3>No publications found</h3>
+          <p>Try different keywords or clear the search filter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS PAGE -->
+  <section id="page-projects" class="page-section" aria-label="Projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Active Research</p>
+        <h1 class="section-title">Current Projects</h1>
+        <p class="section-desc">Lab projects at the intersection of advanced biofabrication, biomaterials, and translational medicine.</p>
+      </div>
+      <div class="projects-grid" role="list">
+
+        <article class="project-card" role="listitem">
+          <div class="project-top">
+            <span class="project-num" aria-hidden="true">01</span>
+            <span class="status-badge in-review">In Review · Nature</span>
+          </div>
+          <h2 class="project-title">3D Printing of Air</h2>
+          <p class="project-desc">Pioneering a paradigm shift by using air as a bioink — directly printing hollow, perfusable channel networks within soft bioprinted constructs. Enables fabrication of vascularized artificial tissues for disease modelling and regenerative therapy without biodegradable sacrificial materials.</p>
+          <div class="project-tags">
+            <span class="project-tag">Vascularization</span>
+            <span class="project-tag">Bioink</span>
+            <span class="project-tag">Air Printing</span>
+            <span class="project-tag">Perfusable Tissue</span>
+          </div>
+          <div class="project-funding"><strong>Funding:</strong> NIH $3M (2024–2028) · Patent Filed · Lead idea conception &amp; full proposal writing</div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <div class="project-top">
+            <span class="project-num" aria-hidden="true">02</span>
+            <span class="status-badge ongoing">Ongoing</span>
+          </div>
+          <h2 class="project-title">4D Bioprinting of Microgel-based Vascularized Muscle</h2>
+          <p class="project-desc">Developing bioactive self-actuating microgel scaffolds that undergo time-dependent (4D) shape change after printing. Targets faster vascularization of muscle tissue constructs using stimuli-responsive hydrogel systems with embedded growth factors.</p>
+          <div class="project-tags">
+            <span class="project-tag">4D Bioprinting</span>
+            <span class="project-tag">Microgels</span>
+            <span class="project-tag">Muscle Tissue</span>
+            <span class="project-tag">Stimuli-responsive</span>
+          </div>
+          <div class="project-funding"><strong>Funding:</strong> MRI $50K (2025–2027) · Full proposal writing</div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <div class="project-top">
+            <span class="project-num" aria-hidden="true">03</span>
+            <span class="status-badge complete">Published</span>
+          </div>
+          <h2 class="project-title">Intraoperative Robotic Arm Bioprinting</h2>
+          <p class="project-desc">Deployed a 6-axis EPSON robotic arm for in-situ bioprinting directly into craniomaxillofacial defects in rat and sheep models. Published in <em>Small Science</em>. Demonstrates clinical feasibility of direct-to-wound bioprinting during surgery.</p>
+          <div class="project-tags">
+            <span class="project-tag">Robotic Arm</span>
+            <span class="project-tag">In-situ Bioprinting</span>
+            <span class="project-tag">Bone Reconstruction</span>
+            <span class="project-tag">Translational</span>
+          </div>
+          <div class="project-funding"><strong>Collaborator:</strong> Dr. Dino Ravnic, Hershey Medical Centre</div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <div class="project-top">
+            <span class="project-num" aria-hidden="true">04</span>
+            <span class="status-badge ongoing">Ongoing</span>
+          </div>
+          <h2 class="project-title">High-throughput Microgel Platforms</h2>
+          <p class="project-desc">Engineering air-assisted co-axial jetting systems for scalable production of uniform microgels. Applications span cell encapsulation, granular bioinks for 3D printing, and modular vascularized tissue assembly. Systematic ion-responsive crosslinking for programmable mechanics.</p>
+          <div class="project-tags">
+            <span class="project-tag">Microgels</span>
+            <span class="project-tag">Co-axial Jetting</span>
+            <span class="project-tag">Cell Encapsulation</span>
+            <span class="project-tag">Granular Bioink</span>
+          </div>
+          <div class="project-funding"><strong>Related patents:</strong> Microgel Composition (Filed)</div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <div class="project-top">
+            <span class="project-num" aria-hidden="true">05</span>
+            <span class="status-badge in-review">In Review</span>
+          </div>
+          <h2 class="project-title">AI-guided Bioprinting Optimization</h2>
+          <p class="project-desc">Collaborating with machine learning experts at Federal Institute of São Paulo to build AI-driven process controllers for 3D bioprinting. Targets real-time optimization of print fidelity, strand geometry, and cell viability from sensor feedback loops.</p>
+          <div class="project-tags">
+            <span class="project-tag">Artificial Intelligence</span>
+            <span class="project-tag">Process Control</span>
+            <span class="project-tag">Print Fidelity</span>
+            <span class="project-tag">Collaboration</span>
+          </div>
+          <div class="project-funding"><strong>Collaborator:</strong> J. Robazzi &amp; A. Dias, Federal Institute of São Paulo, Brazil</div>
+        </article>
+
+        <article class="project-card" role="listitem">
+          <div class="project-top">
+            <span class="project-num" aria-hidden="true">06</span>
+            <span class="status-badge ongoing">Ongoing</span>
+          </div>
+          <h2 class="project-title">Bone Scaffold Doctoral Research Legacy</h2>
+          <p class="project-desc">Foundational work on natural-bone-inspired 3D-printed hierarchical scaffolds for orthopaedic and craniomaxillofacial reconstruction. Includes cryogenic gel printing, PCL frameworks, and surface treatment. Thesis awarded the Naik &amp; Rastogi Excellence in Ph.D. Thesis Award 2022.</p>
+          <div class="project-tags">
+            <span class="project-tag">Bone Graft</span>
+            <span class="project-tag">Hierarchical Scaffold</span>
+            <span class="project-tag">PCL</span>
+            <span class="project-tag">Hydrogel</span>
+          </div>
+          <div class="project-funding"><strong>Grants:</strong> DST · Tata Centre for Tech &amp; Design (IIT Bombay)</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES PAGE -->
+  <section id="page-resources" class="page-section" aria-label="Resources">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Open Science</p>
+        <h1 class="section-title">Resources</h1>
+        <p class="section-desc">Datasets, code repositories, and useful links for collaborators and the broader research community.</p>
+      </div>
+
+      <div class="resource-section">
+        <h2 class="resource-group-title">Code &amp; Software</h2>
+        <nav class="resource-list" aria-label="Code repositories">
+          <a href="https://github.com/deepakgupta-psu" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <img src="https://cdn.simpleicons.org/github/0f1b2d" width="22" height="22" alt="" loading="lazy">
+            </div>
+            <div class="res-body">
+              <div class="res-name">GitHub — @deepakgupta-psu</div>
+              <div class="res-desc">Python scripts for bioprinting process control, robotic arm motion planning, zebrafish larvae tracking, and scaffold geometry generation.</div>
+              <div class="res-url">github.com/deepakgupta-psu</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://github.com/OzbolatLab" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <img src="https://cdn.simpleicons.org/github/0f1b2d" width="22" height="22" alt="" loading="lazy">
+            </div>
+            <div class="res-body">
+              <div class="res-name">Ozbolat Lab — GitHub</div>
+              <div class="res-desc">Group repository for lab protocols, image analysis pipelines, and supplementary code from published papers.</div>
+              <div class="res-url">github.com/OzbolatLab</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </nav>
+      </div>
+
+      <div class="resource-section">
+        <h2 class="resource-group-title">Datasets</h2>
+        <nav class="resource-list" aria-label="Datasets">
+          <a href="https://doi.org/10.1021/acsami.9b05460" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="res-body">
+              <div class="res-name">Cryogenic 3D Gel Scaffold Dataset</div>
+              <div class="res-desc">Mechanical testing, porosity measurements, and cell viability data for multiscale cryogenically printed gels (ACS AMI, 2019).</div>
+              <div class="res-url">Supplementary data via ACS Publications</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://doi.org/10.1088/1758-5090/acc4eb" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="res-body">
+              <div class="res-name">High-throughput Microgel Biofabrication Dataset</div>
+              <div class="res-desc">Jetting parameters, size distributions, and encapsulation efficiency data for air-assisted co-axial microgel systems (Biofabrication, 2023).</div>
+              <div class="res-url">Supplementary data via IOP Publishing</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </nav>
+      </div>
+
+      <div class="resource-section">
+        <h2 class="resource-group-title">Academic Profiles</h2>
+        <nav class="resource-list" aria-label="Academic profiles">
+          <a href="https://orcid.org/0000-0003-0069-7488" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <img src="https://cdn.simpleicons.org/orcid/a6ce39" width="22" height="22" alt="" loading="lazy">
+            </div>
+            <div class="res-body">
+              <div class="res-name">ORCID Profile</div>
+              <div class="res-desc">Complete publication list with DOIs and contribution statements. ORCID: 0000-0003-0069-7488</div>
+              <div class="res-url">orcid.org/0000-0003-0069-7488</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=deepak-gupta-iitb" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <img src="https://cdn.simpleicons.org/googlescholar/4285f4" width="22" height="22" alt="" loading="lazy">
+            </div>
+            <div class="res-body">
+              <div class="res-name">Google Scholar</div>
+              <div class="res-desc">Citation metrics, h-index, and full publication listing with citation counts per paper.</div>
+              <div class="res-url">Google Scholar — Dr. Deepak Gupta</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://www.researchgate.net/profile/Deepak-Gupta" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <img src="https://cdn.simpleicons.org/researchgate/00ccbb" width="22" height="22" alt="" loading="lazy">
+            </div>
+            <div class="res-body">
+              <div class="res-name">ResearchGate</div>
+              <div class="res-desc">Full-text preprints, supplementary materials, and collaborator networking on ResearchGate.</div>
+              <div class="res-url">researchgate.net/profile/Deepak-Gupta</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="https://www.esm.psu.edu" class="resource-item" target="_blank" rel="noopener noreferrer">
+            <div class="res-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="res-body">
+              <div class="res-name">Ozbolat Lab — Penn State ESM</div>
+              <div class="res-desc">Official page of the Engineering Science and Mechanics Department group, led by Prof. Ibrahim T. Ozbolat.</div>
+              <div class="res-url">esm.psu.edu</div>
+            </div>
+            <svg class="res-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV PAGE -->
+  <section id="page-cv" class="page-section" aria-label="Curriculum Vitae">
+    <div class="container cv-page-wrap">
+      <div class="cv-download-bar">
+        <div class="cv-dl-info">
+          <h3>Curriculum Vitae — Dr. Deepak Gupta</h3>
+          <p>Ph.D. IIT Bombay · Postdoctoral Researcher, Pennsylvania State University · Updated May 2026</p>
+        </div>
+        <a href="mailto:dpg5504@psu.edu?subject=CV Request" style="display:inline-flex;align-items:center;gap:.5rem;font-size:var(--text-sm);font-weight:700;padding:.75rem 1.5rem;background:#fff;color:#0f1b2d;border-radius:var(--radius-md);text-decoration:none;white-space:nowrap;flex-shrink:0;" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Request Full CV
+        </a>
+      </div>
+
+      <!-- Education -->
+      <section class="cv-section" aria-labelledby="edu-title">
+        <h2 id="edu-title" class="cv-section-title">Education</h2>
+        <div class="cv-row">
+          <div class="cv-date">2022 – present</div>
+          <div class="cv-detail"><h4>Postdoctoral Researcher</h4><p>Engineering Science &amp; Mechanics · Pennsylvania State University, USA<br>Advisor: Prof. Ibrahim T. Ozbolat</p></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-date">2021 – 2022</div>
+          <div class="cv-detail"><h4>Postdoctoral Researcher</h4><p>Chemical Engineering · IIT Bombay, India<br>Advisor: Prof. Jayesh Bellare</p></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-date">2014 – 2021</div>
+          <div class="cv-detail"><h4>Ph.D. &amp; M.Tech. (Dual)</h4><p>Chemical Engineering · IIT Bombay, India · CPI: 9.29<br>Thesis: 3D scaffolds for bone reconstruction — bioresorbable, natural-bone inspired, 3D-printed, hierarchically structured<br>Advisor: Prof. Jayesh Bellare</p></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-date">2010 – 2014</div>
+          <div class="cv-detail"><h4>B.Tech.</h4><p>Chemical Engineering · IIT (BHU) Varanasi · CPI: 8.08</p></div>
+        </div>
+      </section>
+
+      <!-- Grants -->
+      <section class="cv-section" aria-labelledby="grants-title">
+        <h2 id="grants-title" class="cv-section-title">Grants Awarded (as Key Contributor)</h2>
+        <div class="cv-row">
+          <div class="cv-date">2024 – 2028</div>
+          <div class="cv-detail"><h4>NIH · $3,000,000</h4><p><em>3D Printing of Air: An Intangible Ink for Fabrication of Vascularized Tissues</em><br>PI: Ibrahim Ozbolat, Dino Ravnic — Deepak Gupta: full idea conception and proposal writing</p></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-date">2025 – 2027</div>
+          <div class="cv-detail"><h4>MRI · $50,000</h4><p><em>4D Bioprinting of Bioactive Self-actuation-enabled Microgel-based Vascularized Muscle Tissue Model</em><br>PI: Ozbolat, Ravnic, Nader — Deepak Gupta: full proposal writing</p></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-date">2016 – 2020</div>
+          <div class="cv-detail"><h4>DST (India)</h4><p><em>Performance of 3-D structurally graded near net shape material for bone tissue engineering</em> · PI: J. Bellare, IIT Bombay</p></div>
+        </div>
+        <div class="cv-row">
+          <div class="cv-date">2014 – 2019</div>
+          <div class="cv-detail"><h4>Tata Centre for Technology &amp; Design</h4><p><em>Development of low-cost bone and near net shape graft for dental and orthopaedic bone reconstruction</em> · PI: J. Bellare</p></div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section class="cv-section" aria-labelledby="awards-title">
+        <h2 id="awards-title" class="cv-section-title">Awards &amp; Achievements</h2>
+        <div class="cv-row"><div class="cv-date">2022</div><div class="cv-detail"><h4>Naik and Rastogi Excellence in Ph.D. Thesis Award</h4><p>Department of Chemical Engineering, IIT Bombay</p></div></div>
+        <div class="cv-row"><div class="cv-date">2017</div><div class="cv-detail"><h4>Student Travel Award (STAR)</h4><p>Society for Biomaterials, Minneapolis, Minnesota, USA</p></div></div>
+        <div class="cv-row"><div class="cv-date">2015</div><div class="cv-detail"><h4>Study Tour — MIT, USA</h4><p>Selected as IIT Bombay Tata Centre representative at Massachusetts Institute of Technology</p></div></div>
+        <div class="cv-row"><div class="cv-date">2014</div><div class="cv-detail"><h4>TATA Fellow</h4><p>Tata Centre for Technology &amp; Design, IIT Bombay</p></div></div>
+        <div class="cv-row"><div class="cv-date">2014</div><div class="cv-detail"><h4>GATE Rank 155</h4><p>Graduate Aptitude Test in Engineering</p></div></div>
+        <div class="cv-row"><div class="cv-date">2010</div><div class="cv-detail"><h4>IIT-JEE — 99th Percentile</h4><p>Indian Institute of Technology Joint Entrance Exam</p></div></div>
+      </section>
+
+      <!-- Skills -->
+      <section class="cv-section" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="cv-section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group"><h4>Fabrication</h4><div class="skill-tags"><span class="skill-tag">3D Bioprinting</span><span class="skill-tag">Cryogenic 3D Printer</span><span class="skill-tag">6-Axis Robotic Arm</span><span class="skill-tag">Droplet Bioprinting</span><span class="skill-tag">Electrospinning</span></div></div>
+          <div class="skill-group"><h4>Analytical</h4><div class="skill-tags"><span class="skill-tag">SEM / FEG-SEM</span><span class="skill-tag">Micro-CT</span><span class="skill-tag">Confocal Microscopy</span><span class="skill-tag">Rheology</span><span class="skill-tag">AFM</span><span class="skill-tag">FTIR</span><span class="skill-tag">TGA</span></div></div>
+          <div class="skill-group"><h4>Biology</h4><div class="skill-tags"><span class="skill-tag">hMSC Isolation</span><span class="skill-tag">3D Cell Culture</span><span class="skill-tag">Immunofluorescence</span><span class="skill-tag">CAM Assay</span><span class="skill-tag">Stem Cell Work</span></div></div>
+          <div class="skill-group"><h4>Software</h4><div class="skill-tags"><span class="skill-tag">SolidWorks</span><span class="skill-tag">MIMICS</span><span class="skill-tag">Meshmixer</span><span class="skill-tag">ImageJ/Fiji</span><span class="skill-tag">ANSYS</span><span class="skill-tag">MATLAB</span><span class="skill-tag">Python</span><span class="skill-tag">nTopology</span></div></div>
+          <div class="skill-group"><h4>Research</h4><div class="skill-tags"><span class="skill-tag">Grant Writing</span><span class="skill-tag">Project Management</span><span class="skill-tag">Lab Management</span><span class="skill-tag">Mentoring</span><span class="skill-tag">Peer Review (74 articles)</span></div></div>
+        </div>
+      </section>
+
+      <!-- Patents -->
+      <section class="cv-section" aria-labelledby="patents-title">
+        <h2 id="patents-title" class="cv-section-title">Patents</h2>
+        <div class="cv-row"><div class="cv-date">Filed</div><div class="cv-detail"><h4>3D Printing of Air</h4><p>Ozbolat, <strong>Gupta</strong>, Alioglu — Penn State University</p></div></div>
+        <div class="cv-row"><div class="cv-date">Filed</div><div class="cv-detail"><h4>Microgel Composition</h4><p>Ozbolat, Pal, <strong>Gupta</strong> — Penn State University</p></div></div>
+        <div class="cv-row"><div class="cv-date">Granted · 382552</div><div class="cv-detail"><h4>3D-printing of scaffold constructs for patient specific regenerative medicine</h4><p>Bellare, <strong>Gupta</strong>, Kumar — IIT Bombay</p></div></div>
+        <div class="cv-row"><div class="cv-date">Granted · 202021048205</div><div class="cv-detail"><h4>A biomimetic three-dimensional hydrogel-based scaffold</h4><p>Bellare, <strong>Gupta</strong> — IIT Bombay</p></div></div>
+        <div class="cv-row"><div class="cv-date">Granted · 202021050970</div><div class="cv-detail"><h4>A biomimetic three-dimensional scaffold</h4><p>Bellare, <strong>Gupta</strong> — IIT Bombay</p></div></div>
+      </section>
+
+      <!-- Teaching -->
+      <section class="cv-section" aria-labelledby="teach-title">
+        <h2 id="teach-title" class="cv-section-title">Teaching &amp; Mentoring</h2>
+        <div class="cv-row"><div class="cv-date">Fall 2025</div><div class="cv-detail"><h4>Instructor — Bioprinting (ESC-518)</h4><p>Engineering Science and Mechanics Department, Penn State University</p></div></div>
+        <div class="cv-row"><div class="cv-date">2022–present</div><div class="cv-detail"><h4>Research Mentor</h4><p>Supervising 3 graduate projects and 4 undergraduate theses at Penn State University</p></div></div>
+        <div class="cv-row"><div class="cv-date">2014–2021</div><div class="cv-detail"><h4>Mentor — IIT Bombay</h4><p>Mentored 5 B.Tech. students; trained 6 students on FEG-SEM; Physics tutor for underprivileged school students ("Abhyasika, IIT-Bombay")</p></div></div>
+      </section>
+
+      <!-- Contact -->
+      <section class="cv-section" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="cv-section-title">Contact</h2>
+        <div class="cv-row"><div class="cv-date">Email</div><div class="cv-detail"><h4><a href="mailto:dpg5504@psu.edu">dpg5504@psu.edu</a></h4><p>W313 Millennium Science Complex, Penn State University, University Park, PA 16802</p></div></div>
+        <div class="cv-row"><div class="cv-date">ORCID</div><div class="cv-detail"><h4><a href="https://orcid.org/0000-0003-0069-7488" target="_blank" rel="noopener noreferrer">0000-0003-0069-7488</a></h4><p>Complete publication list and contribution statements</p></div></div>
+        <div class="cv-row"><div class="cv-date">Phone</div><div class="cv-detail"><h4>+1 347 552 3283</h4><p>Open to collaboration inquiries, faculty position discussions, and seminar invitations.</p></div></div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">Dr. Deepak Gupta</div>
+      <div class="footer-role">Postdoctoral Researcher · Penn State University · Engineering Science &amp; Mechanics</div>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#home" onclick="navigate('home');return false;">Home</a>
+      <a href="#publications" onclick="navigate('publications');return false;">Publications</a>
+      <a href="#projects" onclick="navigate('projects');return false;">Projects</a>
+      <a href="#resources" onclick="navigate('resources');return false;">Resources</a>
+      <a href="#cv" onclick="navigate('cv');return false;">CV</a>
+      <a href="mailto:dpg5504@psu.edu">Email</a>
+      <a href="https://orcid.org/0000-0003-0069-7488" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+    </nav>
+    <p class="footer-copy">© 2026 Dr. Deepak Gupta · Pennsylvania State University · All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Dark mode
+  (function(){
+    const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+    let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+    r.setAttribute('data-theme',d);
+    t&&t.addEventListener('click',()=>{
+      d=d==='dark'?'light':'dark';
+      r.setAttribute('data-theme',d);
+      t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');
+      t.innerHTML=d==='dark'?'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    });
+  })();
+
+  // SPA navigation
+  function navigate(page) {
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById('page-' + page);
+    if(target) target.classList.add('active');
+    document.querySelectorAll('[data-page]').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('data-page') === page);
+    });
+    window.scrollTo({top:0, behavior:'smooth'});
+    window.history.pushState(null, '', '#' + page);
+  }
+
+  // Handle hash on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.slice(1);
+    if(['publications','projects','resources','cv'].includes(hash)) navigate(hash);
+  });
+
+  // Mobile menu
+  function toggleMobileMenu() {
+    const m = document.getElementById('mobile-menu');
+    m.classList.toggle('open');
+  }
+  document.addEventListener('click', e => {
+    const menu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+    if(menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  // BibTeX toggle
+  function toggleBibtex(btn) {
+    const panel = btn.closest('.pub-item').querySelector('.bibtex-panel');
+    const isOpen = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    btn.innerHTML = isOpen
+      ? '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Hide BibTeX'
+      : '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> BibTeX';
+  }
+
+  // Copy BibTeX
+  function copyBibtex(btn) {
+    const text = btn.closest('.bibtex-panel').querySelector('pre').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerHTML;
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    });
+  }
+
+  // Publication search & filter
+  const searchInput = document.getElementById('pub-search');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  let currentFilter = 'all';
+
+  function applyPubFilters() {
+    const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    const items = document.querySelectorAll('.pub-item');
+    let visible = 0;
+    items.forEach(item => {
+      const type = item.getAttribute('data-type') || '';
+      const keywords = item.getAttribute('data-keywords') || '';
+      const title = item.querySelector('.pub-title')?.textContent?.toLowerCase() || '';
+      const authors = item.querySelector('.pub-authors')?.textContent?.toLowerCase() || '';
+      const journal = item.querySelector('.pub-journal')?.textContent?.toLowerCase() || '';
+      const allText = title + ' ' + authors + ' ' + journal + ' ' + keywords;
+      const matchesType = currentFilter === 'all' || type === currentFilter;
+      const matchesQuery = !query || allText.includes(query);
+      const show = matchesType && matchesQuery;
+      item.hidden = !show;
+      if(show) visible++;
+    });
+    const count = document.getElementById('pub-visible-count');
+    if(count) count.textContent = visible;
+    const noResults = document.getElementById('no-results');
+    if(noResults) noResults.hidden = visible > 0;
+    // Hide year groups with no visible items
+    document.querySelectorAll('.pub-year-group').forEach(grp => {
+      const anyVisible = [...grp.querySelectorAll('.pub-item')].some(i => !i.hidden);
+      grp.style.display = anyVisible ? '' : 'none';
+    });
+  }
+
+  if(searchInput) searchInput.addEventListener('input', applyPubFilters);
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-filter');
+      applyPubFilters();
+    });
+  });
+</script>
+</body>
+</html>
