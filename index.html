@@ -1306,7 +1306,7 @@ footer{background:var(--color-surface);border-top:1px solid var(--color-divider)
 // ===== THEME TOGGLE =====
 (function(){
   const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
-  let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  let d='light';
   r.setAttribute('data-theme',d);
   function updateIcon(){
     if(!t)return;
